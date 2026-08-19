@@ -154,7 +154,7 @@ class MainViewController: UIViewController {
         self.view.makeToastActivity(.center)
         /* ========== [显示]过渡动画,[关闭]用户交互 end ==========  */
         self.playerBodyViewOfRender.isPlay = false
-        DRNERenderVideoManager.videoRender(videoUrl: videoAssetUrl, outputName: self.videoName,
+        DRNEVideoRenderHelper.videoRender(videoUrl: videoAssetUrl, outputName: self.videoName,
                                            brightness: brightness, inputContrast: contrast, saturation: saturation) { outputPath in
             /* ========== [隐藏]过渡动画,[开启]用户交互 start ==========  */
             kMainWindow?.isUserInteractionEnabled = true
@@ -165,9 +165,9 @@ class MainViewController: UIViewController {
                 return
             }
             
-            let avAssetUrl = NSURL(fileURLWithPath: outputPath) as URL
-            let avAsset = AVAsset(url: avAssetUrl)
-            self.playerBodyViewOfRender.loadAsset(asset: avAsset)
+            let assetUrl = NSURL(fileURLWithPath: outputPath) as URL
+            let asset = AVAsset(url: assetUrl)
+            self.playerBodyViewOfRender.loadAsset(asset: asset)
         }
     }
 

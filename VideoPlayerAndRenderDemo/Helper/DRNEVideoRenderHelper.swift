@@ -1,6 +1,6 @@
 //
-//  DRNERenderVideoManager.swift
-//  ImageRenderTool
+//  DRNEVideoRenderHelper.swift
+//  VideoPlayerAndRenderDemo
 //
 //  Created by zjn on 2026/8/19.
 //  Copyright © 2026 zjn. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class DRNERenderVideoManager: NSObject {
+class DRNEVideoRenderHelper: NSObject {
     static func videoRender(videoUrl: URL, outputName: String,
                             brightness: CGFloat, inputContrast: CGFloat, saturation: CGFloat,
                             completion: ((String?) -> Void)? = nil) {

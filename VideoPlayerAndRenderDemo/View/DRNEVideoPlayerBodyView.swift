@@ -1,6 +1,6 @@
 //
 //  DRNEVideoPlayerBodyView.swift
-//  ImageRenderTool
+//  VideoPlayerAndRenderDemo
 //
 //  Created by zjn on 2026/8/18.
 //  Copyright © 2026 zjn. All rights reserved.

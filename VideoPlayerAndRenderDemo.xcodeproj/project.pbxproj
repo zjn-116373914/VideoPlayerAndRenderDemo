@@ -11,7 +11,7 @@
 		0C8554A8290C1441008651F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C8554A7290C1441008651F0 /* Assets.xcassets */; };
 		0C8554AB290C1441008651F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8554A9290C1441008651F0 /* LaunchScreen.storyboard */; };
 		0C8554B3290C1B37008651F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8554B2290C1B37008651F0 /* MainViewController.swift */; };
-		0C9781C8303513A300C0B864 /* DRNERenderVideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9781C6303513A300C0B864 /* DRNERenderVideoManager.swift */; };
+		0C9781C8303513A300C0B864 /* DRNEVideoRenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9781C6303513A300C0B864 /* DRNEVideoRenderHelper.swift */; };
 		0C9781C9303513A300C0B864 /* DRNEVideoPlayerBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9781C4303513A300C0B864 /* DRNEVideoPlayerBodyView.swift */; };
 		0C9781CC3035143600C0B864 /* UIColor+RCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9781CB3035143600C0B864 /* UIColor+RCColor.m */; };
 		0CBC5B1030352A35004BA045 /* VideoSource01.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 0CBC5B0F30352A35004BA045 /* VideoSource01.MP4 */; };
@@ -31,7 +31,7 @@
 		0C8554AC290C1441008651F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C8554B2290C1B37008651F0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0C9781C4303513A300C0B864 /* DRNEVideoPlayerBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRNEVideoPlayerBodyView.swift; sourceTree = "<group>"; };
-		0C9781C6303513A300C0B864 /* DRNERenderVideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRNERenderVideoManager.swift; sourceTree = "<group>"; };
+		0C9781C6303513A300C0B864 /* DRNEVideoRenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRNEVideoRenderHelper.swift; sourceTree = "<group>"; };
 		0C9781CA3035143600C0B864 /* UIColor+RCColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+RCColor.h"; sourceTree = "<group>"; };
 		0C9781CB3035143600C0B864 /* UIColor+RCColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RCColor.m"; sourceTree = "<group>"; };
 		0CBC5B0F30352A35004BA045 /* VideoSource01.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = VideoSource01.MP4; sourceTree = "<group>"; };
@@ -91,9 +91,9 @@
 				84164CC02BD60BF9006AB084 /* Resources */,
 				84164CB72BD60967006AB084 /* Header */,
 				0C9781C5303513A300C0B864 /* View */,
-				0C9781C7303513A300C0B864 /* Manager */,
-				0C85549E290C1440008651F0 /* AppDelegate.swift */,
+				0C9781C7303513A300C0B864 /* Helper */,
 				0C8554B2290C1B37008651F0 /* MainViewController.swift */,
+				0C85549E290C1440008651F0 /* AppDelegate.swift */,
 				84B5EE942C748466005F7B8D /* Localizable.strings */,
 				84B5EE982C748489005F7B8D /* InfoPlist.strings */,
 				0C8554A7290C1441008651F0 /* Assets.xcassets */,
@@ -111,12 +111,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		0C9781C7303513A300C0B864 /* Manager */ = {
+		0C9781C7303513A300C0B864 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				0C9781C6303513A300C0B864 /* DRNERenderVideoManager.swift */,
+				0C9781C6303513A300C0B864 /* DRNEVideoRenderHelper.swift */,
 			);
-			path = Manager;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		61FDBB0CBCB8E09894FEEA0F /* Pods */ = {
@@ -251,9 +251,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VideoPlayerAndRenderDemo/Pods-VideoPlayerAndRenderDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VideoPlayerAndRenderDemo/Pods-VideoPlayerAndRenderDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -290,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C9781CC3035143600C0B864 /* UIColor+RCColor.m in Sources */,
-				0C9781C8303513A300C0B864 /* DRNERenderVideoManager.swift in Sources */,
+				0C9781C8303513A300C0B864 /* DRNEVideoRenderHelper.swift in Sources */,
 				0C9781C9303513A300C0B864 /* DRNEVideoPlayerBodyView.swift in Sources */,
 				84164CBB2BD609D0006AB084 /* TSFrameworksHeader.swift in Sources */,
 				0C85549F290C1440008651F0 /* AppDelegate.swift in Sources */,
